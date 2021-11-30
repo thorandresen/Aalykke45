@@ -1,10 +1,14 @@
 // Variables
 $font-family: 'Courier New', Courier, monospace;
 $background-color: #f8f8f8;
+$yellow-color: #ffffff; // CHANGE.
 
 body {
     background-color: $background-color;   
     font-family: $font-family;
+
+    h1 {
+        font-weight: bold;
+        font-size: 60px;
+    }
 }
-
-
