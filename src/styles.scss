@@ -1,2 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-$yellow-main: #FFDA00
+// Variables
+$font-family: 'Courier New', Courier, monospace;
+$background-color: #f8f8f8;
+
+body {
+    background-color: $background-color;   
+    font-family: $font-family;
+}
+
+
