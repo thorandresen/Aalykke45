@@ -1,7 +1,13 @@
 .section-heading {
     width: 100%;
-    height: 700px;
-    background-image: url('/assets/img/2-2.jpg');
+    height: 75px;
+    // background-image: url('/assets/img/2-2.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    // background-color: white;
+    border-bottom: 1px solid grey;
+
 
     .header-text {
         display: flex;
