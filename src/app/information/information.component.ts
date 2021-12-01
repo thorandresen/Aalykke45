@@ -11,7 +11,7 @@ export class InformationComponent implements OnInit {
   mainText: string = '';
   regardsText: string = '';
   signatureText: string = '';
-  imageArray: any[] = [];
+  cardArray: any[] = [];
   jsonObject: any;
 
   constructor(private dataService: DataService) {
@@ -22,7 +22,7 @@ export class InformationComponent implements OnInit {
       this.mainText = this.jsonObject.information.mainInformation;
       this.regardsText = this.jsonObject.information.regards;
       this.signatureText = this.jsonObject.information.signature;
-      this.imageArray = this.jsonObject.information.images;
+      this.cardArray = this.jsonObject.information.images;
     });
   }
 
