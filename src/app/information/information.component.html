@@ -9,13 +9,22 @@
                 <p class="signature-text">{{signatureText}}</p>
             </div>
             <div class="image-carousel-container col">
-                <div *ngFor="let item of cardArray">
-                    <div class="card">
-                        <img src="{{item.path}}" style="width:100%">
-                        <div class="container">
-                            <p>{{item.figureText}}</p>
+                <div id="carousel-information" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div *ngFor="let item of cardArray; let i = index" class="card carousel-item"
+                            [ngClass]="{'active': i == 0}">
+                            <img src="{{item.path}}" style="width:100%">
+                            <div class="container">
+                                <p>{{item.figureText}}</p>
+                            </div>
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carousel-information" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-information" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
                 </div>
             </div>
         </div>
