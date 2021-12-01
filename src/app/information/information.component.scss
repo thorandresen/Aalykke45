@@ -18,8 +18,9 @@
         justify-content: center;
 
         .card {
-            width: 90%;
-            height: 80%;
+            width: 490px;
+            height: 376px;
+            max-height: 376px;
             img {
                 height: 340px;
                 object-fit: cover;
