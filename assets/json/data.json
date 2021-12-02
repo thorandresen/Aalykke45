@@ -34,16 +34,16 @@
                 "link": "https://www.aros.dk/"
             },
             {
-                "title": "Aros",
+                "title": "Marselisborg Deer Park",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Ultrices mi tempus imperdiet nulla. Quis lectus nulla at volutpat diam ut venenatis.",
-                "imagePath": "assets/img/attractions/aros.jpg",
-                "link": "https://www.aros.dk/"
+                "imagePath": "assets/img/attractions/dyrehave.jpg",
+                "link": "https://udflugtssteder.aarhus.dk/marselisborg-dyrehave/#10"
             },
             {
-                "title": "Aros",
+                "title": "Aarhus Domkirke",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Ultrices mi tempus imperdiet nulla. Quis lectus nulla at volutpat diam ut venenatis.",
-                "imagePath": "assets/img/attractions/aros.jpg",
-                "link": "https://www.aros.dk/"
+                "imagePath": "assets/img/attractions/domkirke.jpg",
+                "link": "https://aarhusdomkirke.dk/english/"
             }
         ]
     }
