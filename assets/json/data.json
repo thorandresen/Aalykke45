@@ -1,0 +1,32 @@
+{
+    "header": {
+        "text": "Ålykkevej 45 - test test test"
+    },
+    "information": {
+        "mainInformation": "Am Rande von Dänemarks zweitgrößter und ältester Stadt Aarhus erwartet Sie in einer Ein-Familien-Haus-Siedlung eine hübsche, kleine Ferienwohnung. Das helle Zimmer ist mit einem breiten Doppelbett mit durchgehender Matratze ausgestattet. Eine kleine, gemütliche Sitzecke lädt zum ausruhen, lesen oder fernsehen ein. Der Flachbildfernseher ist technisch auf dem neuesten Stand, es gibt Chromecast, Netflix, AppleTV, HDMI-Kabel und eigenes Wireless.",
+        "roomInformation": "Die Wohnung besteht aus einem Zimmer (19 qm), eigenem Bad und kleiner Küche. Sie hat eine Gesamtgröße von ca. 40 qm. Alles ist im hellen, skandinavischen Stil wohnlich eingerichtet. Die Nichtraucher-Ferienwohnung ist gut für 2 Erwachsene geeignet, eine Aufbettung für bis zu zwei Kleinkinder ist möglich (Reisebette(n) und Wickeltisch sind vorhanden). Haustiere sind nur nach ausdrücklicher Absprache mit dem Gastgeber erlaubt. Kultur, Wassersport und Radtouren sind nur einige der Möglichkeiten in der Kulturhauptstadt von 2017 die Zeit zu verbringen. Ihr Gastgeber, Andreas Termansen, wohnt mit im Haus, spricht fließend dänisch, deutsch und englisch und steht Ihnen mit Rat und Tat und vielen Informationen gerne zur Seite.",
+        "regards": "Ich freue mich auf Sie/euch",
+        "signature": "Andreas Termansen",
+        "images": [
+            {
+                "path": "assets/img/information/1-1.jpg",
+                "figureText": "Soveværelset"
+            },
+            {
+                "path": "assets/img/information/2-2.jpg",
+                "figureText": "Huset"
+            }
+        ]
+    },
+    "attractions": {
+        "title": "Sehenswürdigkeiten",
+        "cards": [
+            {
+                "title": "Den Gamle By",
+                "description:": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "imagePath": "assets/img/attractions/dengamleby.jpg",
+                "link": "https://www.dengamleby.dk/"
+            }
+        ]
+    }
+}
