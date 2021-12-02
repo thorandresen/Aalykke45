@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-attractions',
@@ -6,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attractions.component.scss']
 })
 export class AttractionsComponent implements OnInit {
+  jsonObject: any;
+  cardArray: any[] = [];
+  titleText: string = '';
+  faChevronRight = faChevronRight;
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+    dataService.getData();
+    dataService.eventCallback$.subscribe(data => {
+      this.jsonObject = data;
+      this.titleText = this.jsonObject.attractions.title;
+      this.cardArray = this.jsonObject.attractions.cards;
+    });
+  }
 
   ngOnInit(): void {
   }
