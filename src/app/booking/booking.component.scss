@@ -1,0 +1,44 @@
+.section-booking {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: white;
+    .container-xl {
+
+        .title {
+            font-weight: bold;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            @media (max-width: 1000px) { flex-direction: column; }
+
+            .booking-form-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0 16px;
+
+                .input-group {
+                    margin-bottom: 16px;
+                    max-width: 500px;
+                }
+
+                .input-persons {
+                    width: 75px;
+                }
+
+                .input-number {
+                    width: 300px;
+                }
+            }
+    
+            .booking-information-container {
+                margin: 0 16px;
+            }
+        }
+        
+    }
+}

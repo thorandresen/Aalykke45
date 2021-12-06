@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
+
 import { AppComponent } from './app.component';
 import { HeadingComponent } from './heading/heading.component';
 import { InformationComponent } from './information/information.component';
 import { AttractionsComponent } from './attractions/attractions.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { AttractionsComponent } from './attractions/attractions.component';
     HeadingComponent,
     InformationComponent,
     AttractionsComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
