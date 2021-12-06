@@ -1,5 +1,5 @@
 .section-information {
-    padding-top: 16px;
+    padding-top: 64px;
     padding-bottom: 16px;
     background-color: white;
     
@@ -16,7 +16,7 @@
         font-size: small;
         padding: 16px;
 
-        .signature-text, .regards-text {
+        .signature-text, .regards-text, h1 {
             text-align: center;
         }
     }
@@ -25,10 +25,10 @@
         display: flex;
         justify-content: center;
         padding: 16px;
+        margin-top: 60px;
 
         .card {
-            // @media (max-width: 1000px) { padding: 0 8px; }
-            max-width: 490px;
+            max-width: 450px;
             height: 376px;
             max-height: 376px;
             img {

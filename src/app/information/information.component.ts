@@ -11,6 +11,7 @@ export class InformationComponent implements OnInit {
   mainText: string = '';
   regardsText: string = '';
   signatureText: string = '';
+  headerText: string = '';
   cardArray: any[] = [];
   jsonObject: any;
 
@@ -23,6 +24,7 @@ export class InformationComponent implements OnInit {
       this.regardsText = this.jsonObject.information.regards;
       this.signatureText = this.jsonObject.information.signature;
       this.cardArray = this.jsonObject.information.images;
+      this.headerText = this.jsonObject.information.header;
     });
   }
 
