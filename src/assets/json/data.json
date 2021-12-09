@@ -47,5 +47,9 @@
                 "link": "https://aarhusdomkirke.dk/english/"
             }
         ]
+    },
+    "booking": {
+        "weekPrice": 70,
+        "weekendPrice": 90
     }
 }

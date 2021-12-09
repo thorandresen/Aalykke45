@@ -36,12 +36,24 @@
                     <mat-date-range-picker #picker></mat-date-range-picker>
                 </mat-form-field>
 
+                <button type="button" class="btn btn-dark">Einreichen</button>
             </div>
             <div class="booking-information-container col-6">
                 <h2>Buchung und Preise</h2>
                 <br>
-                <p>Übernachtung für 2 Personen Montag bis Donnerstag 70 Euro pro Nacht*</p>
-                <p>Übernachtung für 2 Personen Freitag bis Sonntag 90 Euro pro Nacht*</p>
+                <h3>Preise</h3>
+                <p>Übernachtung für 2 Personen Montag bis Donnerstag <b>{{weekText}}</b> Euro pro Nacht*</p>
+                <p>Übernachtung für 2 Personen Freitag bis Sonntag <b>{{weekendText}}</b> Euro pro Nacht*</p>
+                <p>Bei Buchung einer Woche (Sonnabend bis Sonnabend) beträgt der Preis <b>{{weekText}}</b> Euro pro
+                    Nacht* für 2 Personen.</p>
+                <p class="extra-info-price"><i>*(Bettwäsche und Handtücher sind im Preis inbegriffen)</i></p>
+
+                <h3>Zusatzinformation</h3>
+                <p><b>Endreinigung:</b> 30 Euro, kann aber selbst vorgenommen werden, Gerät und Mittel sind vorhanden.
+                </p>
+                <p><b>Kaution:</b> Bei gemeinsamer Begehung bei An- und Abreise unnötig, sonst 200 Euro bei Anreise.</p>
+                <p><b>Haustiere:</b> sind nur nach vorheriger Absprache mit dem Vermieter erlaubt.</p>
+                <p><b>Parkplatz</b>: (kostenlos) ist auf dem Grundstück vorhanden</p>
             </div>
         </div>
 

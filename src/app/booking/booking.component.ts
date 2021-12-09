@@ -9,6 +9,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class BookingComponent implements OnInit {
   jsonObject: any;
+  weekText: string = '';
+  weekendText: string = '';
 
   range = new FormGroup({
     start: new FormControl(),
@@ -19,6 +21,8 @@ export class BookingComponent implements OnInit {
     dataService.getData();
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
+      this.weekText = this.jsonObject.booking.weekPrice;
+      this.weekendText = this.jsonObject.booking.weekendPrice;
     });
   }
 

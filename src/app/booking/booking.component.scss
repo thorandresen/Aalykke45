@@ -13,7 +13,7 @@
         .main-container {
             display: flex;
             flex-direction: row;
-            @media (max-width: 1000px) { flex-direction: column; }
+            @media (max-width: 1000px) { flex-direction: column-reverse; }
 
             .booking-form-container {
                 display: flex;
@@ -37,6 +37,10 @@
     
             .booking-information-container {
                 margin: 0 16px;
+
+                .extra-info-price {
+                    font-size: smaller;
+                }
             }
         }
         
