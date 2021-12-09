@@ -1,6 +1,5 @@
 <div class="section-booking">
     <div class="container-xl">
-        <h2 class="title">Buchen</h2>
         <div class="main-container">
             <div class="booking-form-container col-6">
 
@@ -18,8 +17,8 @@
 
                 <label for="phone-input">Telefonnummer</label>
                 <div class="input-group input-number">
-                    <input type="text" class="form-control" placeholder="" aria-label="Phonenumber"
-                        aria-describedby="phone-input">
+                    <input type="tel" class="form-control" placeholder="" aria-label="Phonenumber"
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" aria-describedby="phone-input">
                 </div>
 
                 <label for="persons-input">Personen</label>
@@ -27,9 +26,26 @@
                     <input type="number" class="form-control" aria-label="Personen" aria-describedby="persons-input">
                 </div>
 
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                        <input matStartDate formControlName="start" placeholder="Start date">
+                        <input matEndDate formControlName="end" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+
+                    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date
+                    </mat-error>
+                    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+                </mat-form-field>
+
             </div>
             <div class="booking-information-container col-6">
-                <h3>skrrt</h3>
+                <h2>Buchung und Preise</h2>
+                <br>
+                <p>Übernachtung für 2 Personen Montag bis Donnerstag 70 Euro pro Nacht*</p>
+                <p>Übernachtung für 2 Personen Freitag bis Sonntag 90 Euro pro Nacht*</p>
             </div>
         </div>
 

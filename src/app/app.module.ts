@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
 
 
 import { AppComponent } from './app.component';
@@ -10,6 +14,7 @@ import { HeadingComponent } from './heading/heading.component';
 import { InformationComponent } from './information/information.component';
 import { AttractionsComponent } from './attractions/attractions.component';
 import { BookingComponent } from './booking/booking.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { BookingComponent } from './booking/booking.component';
     BrowserModule,
     HttpClientModule,
     FontAwesomeModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    NoopAnimationsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

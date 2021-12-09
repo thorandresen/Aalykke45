@@ -12,14 +12,13 @@ export class DataService {
   eventCallback$ = this.eventCallback.asObservable(); // Stream
 
   constructor(private http: HttpClient) {
-  }
-
-  ;
-  getData() {
     this.http.get(this._jsonURL).subscribe(data => {
       this.jsonObject = data;
       this.eventCallback.next(this.jsonObject);
     }
     )
+  }
+  getData() {
+    return this.jsonObject;
   }
 }
