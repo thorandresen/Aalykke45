@@ -15,6 +15,7 @@ import { InformationComponent } from './information/information.component';
 import { AttractionsComponent } from './attractions/attractions.component';
 import { BookingComponent } from './booking/booking.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     InformationComponent,
     AttractionsComponent,
     BookingComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
