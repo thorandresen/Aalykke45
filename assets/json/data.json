@@ -10,12 +10,28 @@
         "signature": "Andreas Termansen",
         "images": [
             {
-                "path": "assets/img/information/1-1.jpg",
-                "figureText": "Soveværelset"
+                "path": "assets/img/information/1_garden.jpg",
+                "figureText": "Garten"
             },
             {
-                "path": "assets/img/information/2-2.jpg",
-                "figureText": "Huset"
+                "path": "assets/img/information/2_room.jpg",
+                "figureText": "Zimmer"
+            },
+            {
+                "path": "assets/img/information/3_room.jpg",
+                "figureText": "Zimmer"
+            },
+            {
+                "path": "assets/img/information/4_kitchen.jpg",
+                "figureText": "Küche"
+            },
+            {
+                "path": "assets/img/information/5_beach.jpg",
+                "figureText": "Strand"
+            },
+            {
+                "path": "assets/img/information/6_beach.jpg",
+                "figureText": "Strand"
             }
         ]
     },
