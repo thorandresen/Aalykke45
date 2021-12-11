@@ -67,5 +67,9 @@
     "booking": {
         "weekPrice": 70,
         "weekendPrice": 90
+    },
+    "footer": {
+        "email": "example@gmail.com",
+        "phoneNumber": "+45 00 00 00 00"
     }
 }

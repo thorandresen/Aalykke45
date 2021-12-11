@@ -20,6 +20,7 @@
         flex-direction: column;
         font-size: small;
         padding: 16px;
+        text-align: justify;
         
         .signature-text, .regards-text {
             text-align: center;
@@ -35,8 +36,8 @@
         .card {
             @media (min-width: 600px) { width: 500px; }
             max-width: 500px;
-            height: 376px;
-            max-height: 376px;
+            // height: 376px;
+            // max-height: 376px;
             img {
                 height: 340px;
                 object-fit: cover;
@@ -45,9 +46,9 @@
         .container {
             padding-top: 8px;
             p {
-                font-size: small;
+                font-size: smaller;
                 text-align: center;
-                margin-bottom: 0;
+                margin-bottom: 8px;
             }
         }
     }

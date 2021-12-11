@@ -11,6 +11,10 @@ export class BookingComponent implements OnInit {
   jsonObject: any;
   weekText: string = '';
   weekendText: string = '';
+  nameinput: string = '';
+  emailinput: string = '';
+  phoneinput: string = '';
+  personsinput: number = 0;
 
   range = new FormGroup({
     start: new FormControl(),
@@ -27,6 +31,13 @@ export class BookingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(): void {
+    console.log(this.nameinput);
+    console.log(this.emailinput);
+    console.log(this.phoneinput);
+    console.log(this.personsinput);
   }
 
 }

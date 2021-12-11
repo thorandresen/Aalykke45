@@ -2,53 +2,52 @@
     <div class="container-xl">
         <div class="main-container">
             <div class="booking-form-container col">
-
+                <h2>Buchung</h2>
                 <label for="name-input">Vollständiger Name</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="" aria-label="Fullname"
-                        aria-describedby="name-input">
+                    <input type="text" name="nameinput" class="form-control" placeholder="" aria-label="Fullname"
+                        aria-describedby="name-input" [(ngModel)]="nameinput">
                 </div>
 
                 <label for="email-input">E-mail</label>
                 <div class="input-group">
-                    <input type="email" class="form-control" placeholder="" aria-label="Email"
-                        aria-describedby="email-input">
+                    <input type="email" name="emailinput" class="form-control" placeholder="" aria-label="Email"
+                        aria-describedby="email-input" [(ngModel)]="emailinput">
                 </div>
 
                 <label for="phone-input">Telefonnummer</label>
                 <div class="input-group input-number">
-                    <input type="tel" class="form-control" placeholder="" aria-label="Phonenumber"
-                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" aria-describedby="phone-input">
+                    <input type="tel" name="phoneinput" class="form-control" placeholder="" aria-label="Phonenumber"
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" aria-describedby="phone-input" [(ngModel)]="phoneinput">
                 </div>
 
                 <label for="persons-input">Personen</label>
                 <div class="input-group input-persons">
-                    <input type="number" class="form-control" aria-label="Personen" aria-describedby="persons-input">
+                    <input type="number" name="personsinput" class="form-control" aria-label="Personen"
+                        aria-describedby="persons-input" [(ngModel)]="personsinput">
                 </div>
 
                 <mat-form-field appearance="fill">
-                    <mat-label>Enter a date range</mat-label>
+                    <mat-label>Besuchstage auswählen</mat-label>
                     <mat-date-range-input [rangePicker]="picker">
-                        <input matStartDate placeholder="Start date">
-                        <input matEndDate placeholder="End date">
+                        <input matStartDate placeholder="Startdatum">
+                        <input matEndDate placeholder="Enddatum">
                     </mat-date-range-input>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-date-range-picker #picker></mat-date-range-picker>
                 </mat-form-field>
 
-                <button type="button" class="btn btn-dark">Einreichen</button>
+                <button type="button" (click)="onSubmit()" class="btn btn-dark">Einreichen</button>
             </div>
             <div class="booking-information-container col">
-                <h2>Buchung und Preise</h2>
-                <br>
-                <h3>Preise</h3>
+                <h4>Preise</h4>
                 <p>Übernachtung für 2 Personen Montag bis Donnerstag <b>{{weekText}}</b> Euro pro Nacht*</p>
                 <p>Übernachtung für 2 Personen Freitag bis Sonntag <b>{{weekendText}}</b> Euro pro Nacht*</p>
                 <p>Bei Buchung einer Woche (Sonnabend bis Sonnabend) beträgt der Preis <b>{{weekText}}</b> Euro pro
                     Nacht* für 2 Personen.</p>
                 <p class="extra-info-price"><i>*(Bettwäsche und Handtücher sind im Preis inbegriffen)</i></p>
 
-                <h3>Zusatzinformation</h3>
+                <h4>Zusatzinformation</h4>
                 <p><b>Endreinigung:</b> 30 Euro, kann aber selbst vorgenommen werden, Gerät und Mittel sind vorhanden.
                 </p>
                 <p><b>Kaution:</b> Bei gemeinsamer Begehung bei An- und Abreise unnötig, sonst 200 Euro bei Anreise.</p>
