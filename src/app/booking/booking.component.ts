@@ -15,7 +15,6 @@ export class BookingComponent implements OnInit {
   emailinput: string = '';
   phoneinput: string = '';
   personsinput: number = 0;
-
   range = new FormGroup({
     start: new FormControl(),
     end: new FormControl(),
@@ -38,6 +37,7 @@ export class BookingComponent implements OnInit {
     console.log(this.emailinput);
     console.log(this.phoneinput);
     console.log(this.personsinput);
+    console.log(this.range)
   }
 
 }
