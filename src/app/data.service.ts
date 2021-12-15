@@ -18,6 +18,7 @@ export class DataService {
     }
     )
   }
+
   getData() {
     return this.jsonObject;
   }
