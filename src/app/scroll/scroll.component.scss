@@ -21,5 +21,11 @@
 
     a {
         margin-bottom: 16px;
+        text-decoration: none;
+        color: grey
+    }
+
+    a:hover {
+        color: rgb(107, 104, 199)
     }
 }
