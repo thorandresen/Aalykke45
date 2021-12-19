@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -10,16 +10,26 @@ import { DOCUMENT } from '@angular/common';
 
 @Injectable()
 export class ScrollComponent implements OnInit {
+  headers: string[] = [];
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
-
-  ngOnInit(): void {
-    this.getAllHeadersInDocument();
+  constructor(@Inject(DOCUMENT) private document: Document) {
   }
 
-  getAllHeadersInDocument() {
-    var matches = this.document.querySelectorAll("#indexable");
-    console.log(matches);
+  ngOnInit(): void {
+    this.headers = this.getAllHeadersInDocument();
+  }
+
+  getAllHeadersInDocument(): string[] {
+    let headerList: string[] = [];
+
+    window.addEventListener('DOMContentLoaded', () => {
+      var matches = this.document.querySelectorAll(".indexable");
+      matches.forEach((element) => {
+        headerList.push(element.id);
+      })
+    });
+
+    return headerList;
   }
 
 }

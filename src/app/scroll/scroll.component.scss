@@ -1,8 +1,16 @@
 .component-scroll {
-    position: absolute;
+    @media (max-width: 1800px) { 
+        display: none;
+     }
+    position: fixed;
     display: flex;
+    flex-direction: column;
     top: 10%;
-    left: 90%;
+    left: 85%;
     border-left: 2px solid black;
     padding: 0 8px;
+
+    a {
+        margin-bottom: 16px;
+    }
 }

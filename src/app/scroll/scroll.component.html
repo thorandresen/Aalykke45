@@ -1,3 +1,5 @@
 <div class="component-scroll">
-    <p>skrrt</p>
+    <div *ngFor="let header of headers;">
+        <a href="#{{header}}">{{header}}</a>
+    </div>
 </div>
