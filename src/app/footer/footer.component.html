@@ -1,5 +1,11 @@
 <div class="section-footer">
     <p><b>Andreas Termansen</b></p>
-    <p>{{emailText}} | {{phoneNumberText}}</p>
+    <p>
+        <span class="email">
+            <fa-icon [icon]="faEnvelope"></fa-icon> {{emailText}}
+        </span> | <span class="phone">
+            <fa-icon [icon]="faPhone"></fa-icon> {{phoneNumberText}}
+        </span>
+    </p>
     <p>Created & maintained by <a href="https://github.com/thorandresen">Thor Garske Andresen</a> @ 2021</p>
 </div>

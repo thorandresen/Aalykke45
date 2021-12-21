@@ -34,6 +34,7 @@ export class BookingComponent implements OnInit {
   }
 
   onSubmit(): void {
+
     console.log(this.nameinput);
     console.log(this.emailinput);
     console.log(this.phoneinput);

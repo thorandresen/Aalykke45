@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +13,8 @@ export class FooterComponent implements OnInit {
   jsonObject: any;
   emailText: string = '';
   phoneNumberText: string = '';
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
 
   constructor(private dataService: DataService) {
     dataService.getData();
