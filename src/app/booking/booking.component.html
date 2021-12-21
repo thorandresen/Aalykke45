@@ -3,11 +3,33 @@
         <div class="main-container">
             <div class="booking-form-container col">
                 <h2 class="indexable" id="Buchung">Buchung</h2>
-                <label for="name-input">Vollständiger Name</label>
+
+                <!-- <label for="name-input">Vollständiger Name</label>
+                    <div class="input-group">
+                        <input type="text" id="name-input" name="name-input" class="form-control"
+                            [(ngModel)]="nameinput" ng-model="name-input" required>
+
+                        <div *ngIf="nameinput.errors?.['required']">
+                            Name is required.
+                        </div>
+                    </div> -->
+                <label for="nameInputForm">Vollständiger Name</label>
                 <div class="input-group">
-                    <input type="text" name="nameinput" class="form-control" placeholder="" aria-label="Fullname"
-                        aria-describedby="name-input" [(ngModel)]="nameinput">
+                    <input type="text" id="nameInputForm" name="nameInputForm" class="form-control" required
+                        minlength="4" [(ngModel)]="nameinput" #nameInputForm="ngModel">
+
+                    <div *ngIf="nameInputForm.invalid && (nameInputForm.dirty || nameInputForm.touched)" class="alert">
+
+                        <div *ngIf="nameInputForm.errors?.['required']">
+                            Name is required.
+                        </div>
+                        <div *ngIf="nameInputForm.errors?.['minlength']">
+                            Name must be at least 4 characters long.
+                        </div>
+
+                    </div>
                 </div>
+
 
                 <label for="email-input">E-mail</label>
                 <div class="input-group">
@@ -56,6 +78,7 @@
                 </mat-form-field>
 
                 <button type="button" (click)="onSubmit()" class="btn btn-dark">Einreichen</button>
+
             </div>
             <div class="booking-information-container col">
                 <h4>Preise</h4>
