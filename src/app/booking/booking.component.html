@@ -16,52 +16,70 @@
                 <label for="nameInputForm">Vollständiger Name</label>
                 <div class="input-group">
                     <input type="text" id="nameInputForm" name="nameInputForm" class="form-control" required
-                        minlength="4" [(ngModel)]="nameinput" #nameInputForm="ngModel">
+                        minlength="4" [(ngModel)]="nameinput" #nameInputForm="ngModel"
+                        [class.invalid]="nameInputForm.invalid && (nameInputForm.dirty || nameInputForm.touched) && (nameInputForm.errors?.['required'] || nameInputForm.errors?.['minlength'])">
 
                     <div *ngIf="nameInputForm.invalid && (nameInputForm.dirty || nameInputForm.touched)" class="alert">
-
                         <div *ngIf="nameInputForm.errors?.['required']">
-                            Name is required.
+                            Vollständiger Name ist erforderlich
                         </div>
                         <div *ngIf="nameInputForm.errors?.['minlength']">
-                            Name must be at least 4 characters long.
+                            Name muss 4 Zeichen lang sein
                         </div>
-
                     </div>
                 </div>
 
 
-                <label for="email-input">E-mail</label>
+
+                <label for="emailInputForm">E-mail</label>
                 <div class="input-group">
-                    <input type="email" name="emailinput" class="form-control" placeholder="" aria-label="Email"
-                        aria-describedby="email-input" [(ngModel)]="emailinput">
+                    <input type="email" id="emailInputForm" name="emailInputForm" class="form-control"
+                        [(ngModel)]="emailinput" required #emailInputForm="ngModel"
+                        [class.invalid]="nameInputForm.invalid && (emailInputForm.dirty || emailInputForm.touched) && emailInputForm.errors?.['required']">
+
+                    <div *ngIf="emailInputForm.invalid && (emailInputForm.dirty || emailInputForm.touched)"
+                        class="alert">
+                        <div *ngIf="emailInputForm.errors?.['required']">
+                            E-mail erforderlich
+                        </div>
+                    </div>
                 </div>
 
-                <label for="phone-input">Telefonnummer</label>
+                <label for="phoneInputForm">Telefonnummer</label>
                 <div class="input-group input-number">
-                    <input type="tel" name="phoneinput" class="form-control" placeholder="" aria-label="Phonenumber"
-                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" aria-describedby="phone-input" [(ngModel)]="phoneinput">
+                    <input type="tel" name="phoneInputForm" id="phoneInputForm" class="form-control" pattern="[0-9+]*"
+                        [(ngModel)]="phoneinput" #phoneInputForm="ngModel" required
+                        [class.invalid]="phoneInputForm.invalid && (phoneInputForm.dirty || phoneInputForm.touched) && (phoneInputForm.errors?.['required'] || phoneInputForm.errors?.['pattern'])">
+
+                    <div *ngIf="phoneInputForm.invalid && (phoneInputForm.dirty || phoneInputForm.touched)"
+                        class="alert">
+                        <div *ngIf="phoneInputForm.errors?.['required']">
+                            Telefonnummer erforderlich
+                        </div>
+
+                        <div *ngIf="phoneInputForm.errors?.['pattern']">
+                            Nur Zahlen erlaubt
+                        </div>
+                    </div>
                 </div>
 
-                <label for="persons-input">Personen</label>
+                <label for="personInputForm">Personen</label>
                 <div class="input-group input-persons">
-                    <input type="number" name="personsinput" class="form-control" aria-label="Personen"
-                        aria-describedby="persons-input" [(ngModel)]="personsinput">
+                    <input type="number" name="personInputForm" id="personInputForm" #personInputForm="ngModel"
+                        class="form-control" [(ngModel)]="personsinput" pattern="[1-6]*" required
+                        [class.invalid]="personInputForm.invalid && (personInputForm.dirty || personInputForm.touched) && (personInputForm.errors?.['required'] || personInputForm.errors?.['pattern'])">
+
+                    <div *ngIf="personInputForm.invalid && (personInputForm.dirty || personInputForm.touched)"
+                        class="alert">
+                        <div *ngIf="personInputForm.errors?.['required']">
+                            Anzahl der benötigten Personen
+                        </div>
+
+                        <div *ngIf="personInputForm.errors?.['pattern']">
+                            Falsche Personenanzahl
+                        </div>
+                    </div>
                 </div>
-
-                <!-- <mat-form-field appearance="fill">
-                    <mat-label>Besuchstage auswählen</mat-label>
-                    <mat-date-range-input [rangePicker]="picker">
-                        <input matStartDate placeholder="Startdatum">
-                        <input matEndDate placeholder="Enddatum">
-                    </mat-date-range-input>
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-date-range-picker #picker></mat-date-range-picker>
-
-                    <!-- <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date
-                    </mat-error>
-                    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
-                </mat-form-field> -->
 
                 <mat-form-field appearance="fill">
                     <mat-label>Besuchstage auswählen</mat-label>
@@ -76,6 +94,16 @@
                     </mat-error>
                     <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error> -->
                 </mat-form-field>
+
+
+                <label for="commentInputForm">Anmerkungen oder Fragen an den Vermieter</label>
+                <div class="input-group">
+                    <textarea class="form-control" name="commentInputForm" id="commentInputForm"
+                        #commentInputForm="ngModel" [(ngModel)]="commentinput" maxlength="256"></textarea>
+
+                    <p class="maxlength-information">{{commentinput.length}}/256</p>
+                </div>
+
 
                 <button type="button" (click)="onSubmit()" class="btn btn-dark">Einreichen</button>
 

@@ -26,8 +26,28 @@
                 }
 
                 .input-group {
-                    margin-bottom: 16px;
+                    margin-bottom: 26px;
                     max-width: 500px;
+                }
+
+                .alert {
+                    position: absolute;
+                    padding: 8px 0;
+                    margin-bottom: 0;
+                    top: 35px;
+                    font-size: small;
+                    font-style: italic;
+                    color: red;
+                }
+
+                .maxlength-information {
+                    position: absolute;
+                    padding: 8px 0;
+                    margin-bottom: 0;
+                    top: -28px;
+                     left: 460px;
+                    font-size: small;
+                    font-style: italic;
                 }
 
                 .input-persons {
@@ -69,6 +89,10 @@
    ::ng-deep .mat-form-field-label {
     /*change color of label*/
     color: black !important;
+   }
+
+   ::ng-deep .mat-form-field-flex  {
+       border: 1px solid #ced4da;
    }
 
    mat-datepicker-toggle {
