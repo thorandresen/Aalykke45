@@ -16,7 +16,6 @@ export class InformationComponent implements OnInit {
   jsonObject: any;
 
   constructor(private dataService: DataService) {
-    dataService.getData();
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
       this.roomText = this.jsonObject.information.roomInformation;

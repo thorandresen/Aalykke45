@@ -16,7 +16,6 @@ export class BookingComponent implements OnInit {
   isSubmitted: boolean = false;
 
   constructor(private dataService: DataService) {
-    dataService.getData();
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
       this.weekText = this.jsonObject.booking.weekPrice;

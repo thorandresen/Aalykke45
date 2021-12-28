@@ -11,7 +11,6 @@ export class HeadingComponent implements OnInit {
   jsonObject: any;
 
   constructor(private dataService: DataService) {
-    dataService.getData();
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
       this.headerText = this.jsonObject.header.text;

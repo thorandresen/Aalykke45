@@ -14,7 +14,6 @@ export class AttractionsComponent implements OnInit {
   faChevronRight = faChevronRight;
 
   constructor(private dataService: DataService) {
-    dataService.getData();
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
       this.titleText = this.jsonObject.attractions.title;
