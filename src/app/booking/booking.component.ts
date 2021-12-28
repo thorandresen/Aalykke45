@@ -62,9 +62,13 @@ export class BookingComponent implements OnInit {
   }
 
   onSubmit(): void {
-
-    console.log(this.bookingForm.value);
     this.isSubmitted = true;
+
+    if (!this.bookingForm.valid) {
+      return;
+    } else {
+      console.log(this.bookingForm.value);
+    }
   }
 
 }
