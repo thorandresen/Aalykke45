@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../services/data.service';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,7 +17,6 @@ export class FooterComponent implements OnInit {
   faPhone = faPhone;
 
   constructor(private dataService: DataService) {
-    dataService.getData();
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
       this.emailText = this.jsonObject.footer.email;
