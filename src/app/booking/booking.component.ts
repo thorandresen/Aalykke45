@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
+import { BookingService } from '../services/booking.service'
 import { FormGroup, FormControl, FormBuilder, Validators, NgForm } from '@angular/forms';
 
 @Component({
@@ -14,8 +15,10 @@ export class BookingComponent implements OnInit {
   commentinput: string = '';
   bookingForm: FormGroup;
   isSubmitted: boolean = false;
+  bookingService: BookingService;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private _bookingService: BookingService) {
+    this.bookingService = _bookingService;
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
       this.weekText = this.jsonObject.booking.weekPrice;
@@ -44,7 +47,7 @@ export class BookingComponent implements OnInit {
       personInputControl: new FormControl(
         '',
         [
-          Validators.pattern('^[1-6]*$'),
+          Validators.pattern('^[1-6]$'),
           Validators.required
         ]
       ),
@@ -66,6 +69,7 @@ export class BookingComponent implements OnInit {
     if (!this.bookingForm.valid) {
       return;
     } else {
+      this.bookingService.sendBooking();
       console.log(this.bookingForm.value);
     }
   }
