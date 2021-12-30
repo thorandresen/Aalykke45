@@ -69,7 +69,13 @@ export class BookingComponent implements OnInit {
     if (!this.bookingForm.valid) {
       return;
     } else {
-      this.bookingService.sendBooking();
+      this.bookingService.sendBooking(this.bookingForm.value)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((rej) => {
+          console.log(rej);
+        });
       console.log(this.bookingForm.value);
     }
   }

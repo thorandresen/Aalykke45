@@ -13,8 +13,8 @@ app.get('/', (req, res) => {
 
 app.post('/booking', (req, res) => {
     // console.log(req.body.title);
-    console.log(req.headers);
-    res.status(200).send('Skrrt');
+    console.log(req.body);
+    res.status(200).send(JSON.stringify('200'));
     // res.status(500).send('failed bro');
 })
 

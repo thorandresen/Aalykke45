@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -8,15 +8,20 @@ import { Subject } from 'rxjs';
 export class BookingService {
 
   constructor(private http: HttpClient) { }
-  body = JSON.stringify({
-    hej: 'med dig'
-  });
-  header = new Headers({
-    'Content-Type': 'application/json'
-  });
-  sendBooking() {
-    this.http.post('http://127.0.0.1:3000/booking', this.body, { responseType: 'text' }).subscribe(data => {
-      console.log(data);
-    })
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json', observe: 'response' })
+  };
+
+  sendBooking(payload: any) {
+    return new Promise((res, rej) => {
+      this.http.post('http://127.0.0.1:3000/booking', JSON.stringify(payload), this.httpOptions).subscribe(data => {
+        if (data == '200') {
+          res('200');
+        } else {
+          rej('500');
+        }
+      });
+    });
   }
 }
