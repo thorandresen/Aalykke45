@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { BookingService } from '../services/booking.service'
 import { FormGroup, FormControl, FormBuilder, Validators, NgForm } from '@angular/forms';
+import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-booking',
@@ -17,7 +19,7 @@ export class BookingComponent implements OnInit {
   isSubmitted: boolean = false;
   bookingService: BookingService;
 
-  constructor(private dataService: DataService, private _bookingService: BookingService) {
+  constructor(private dataService: DataService, private _bookingService: BookingService, @Inject(DOCUMENT) private document: Document) {
     this.bookingService = _bookingService;
     dataService.eventCallback$.subscribe(data => {
       this.jsonObject = data;
@@ -34,7 +36,8 @@ export class BookingComponent implements OnInit {
       ),
       emailInputControl: new FormControl('',
         [
-          Validators.required
+          Validators.required,
+          Validators.email
         ]
       ),
       phoneInputControl: new FormControl(
@@ -69,14 +72,19 @@ export class BookingComponent implements OnInit {
     if (!this.bookingForm.valid) {
       return;
     } else {
-      this.bookingService.sendBooking(this.bookingForm.value)
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((rej) => {
-          console.log(rej);
-        });
-      console.log(this.bookingForm.value);
+      console.log('skrrt');
+      var bookingform = this.document.getElementsByClassName('booking-form-container');
+      var loadingform = this.document.getElementsByClassName('loading-form-container');
+      bookingform[0].classList.add('hidden');
+      loadingform[0].classList.remove('hidden');
+
+      // this.bookingService.sendBooking(this.bookingForm.value)
+      //   .then((res) => {
+      //     console.log(res);
+      //   })
+      //   .catch((rej) => {
+      //     console.log(rej);
+      //   });
     }
   }
 

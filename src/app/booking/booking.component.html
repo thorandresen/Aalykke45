@@ -3,6 +3,7 @@
 <div class="section-booking">
     <div class="container-xl">
         <div class="main-container">
+            <div class="loading-form-container col hidden">SKRRRT</div>
             <div class="booking-form-container col">
                 <h2 class="indexable" id="Buchung">Buchung</h2>
                 <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
@@ -30,6 +31,9 @@
                         <div *ngIf="bookingForm.get('emailInputControl')?.errors && isSubmitted" class="alert">
                             <div *ngIf="bookingForm.get('emailInputControl')?.hasError('required')">
                                 E-mail erforderlich
+                            </div>
+                            <div *ngIf="bookingForm.get('emailInputControl')?.hasError('email')">
+                                E-mail ungültig
                             </div>
                         </div>
                     </div>
