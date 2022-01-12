@@ -72,19 +72,19 @@ export class BookingComponent implements OnInit {
     if (!this.bookingForm.valid) {
       return;
     } else {
-      console.log('skrrt');
       var bookingform = this.document.getElementsByClassName('booking-form-container');
       var loadingform = this.document.getElementsByClassName('loading-form-container');
       bookingform[0].classList.add('hidden');
       loadingform[0].classList.remove('hidden');
 
-      // this.bookingService.sendBooking(this.bookingForm.value)
-      //   .then((res) => {
-      //     console.log(res);
-      //   })
-      //   .catch((rej) => {
-      //     console.log(rej);
-      //   });
+      this.bookingService.sendBooking(this.bookingForm.value)
+        .then((res) => {
+
+        })
+        .catch((rej) => {
+          bookingform[0].classList.remove('hidden');
+          loadingform[0].classList.add('hidden');
+        });
     }
   }
 

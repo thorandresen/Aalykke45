@@ -9,7 +9,7 @@ app.use(cors())
 app.use(express.json());
 
 app.post('/booking', (req, res) => {
-
+    console.log('hej');
     var mailOptions = {
         from: 'garskespillercs@gmail.com',
         to: 'thorg3@gmail.com',
