@@ -31,7 +31,6 @@ export class BookingService {
         resp => res(resp),
         erro => rej(erro)
       );
-
     });
   }
 }

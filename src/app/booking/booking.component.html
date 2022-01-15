@@ -3,9 +3,27 @@
 <div class="section-booking">
     <div class="container-xl">
         <div class="main-container">
-            <div class="loading-form-container col hidden">SKRRRT</div>
+            <div class="loading-form-container col hidden">
+                <div class="loader"></div>
+            </div>
+            <div class="finished-form-container col hidden">
+                <div class="finished-box">
+                    <p>
+                        Eingereicht
+                    </p>
+
+                </div>
+            </div>
             <div class="booking-form-container col">
+
                 <h2 class="indexable" id="Buchung">Buchung</h2>
+                <div class="error-form-container hidden">
+                    <div class="error-box">
+                        <p>
+                            Etwas ist schief gelaufen
+                        </p>
+                    </div>
+                </div>
                 <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
                     <label for="nameInputControl">Vollständiger Name</label>
                     <div class="input-group">
