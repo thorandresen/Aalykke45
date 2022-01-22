@@ -40,25 +40,25 @@
         "cards": [
             {
                 "title": "Den Gamle By",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Ultrices mi tempus imperdiet nulla. Quis lectus nulla at volutpat diam ut venenatis.",
+                "description": "Hier sind historische Häuser, Geschäfte und Höfe aus dem gesamten Land im Originalzustand wieder aufgebaut. Dabei werden die verschiedenen Perioden der Geschichte anschaulich dargestellt und viele der Gebäude sind begehbar und vermitteln einen Eindruck der jeweiligen Epoche bis in die Zeit der 70'ger Jahre.",
                 "imagePath": "assets/img/attractions/dengamleby.jpg",
                 "link": "https://www.dengamleby.dk/"
             },
             {
                 "title": "Aros",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Ultrices mi tempus imperdiet nulla. Quis lectus nulla at volutpat diam ut venenatis.",
+                "description": "Gegründet im Jahre 1859 von Bürgern in Århus, ist das Kunstmuseum die größte Kunstsammlung Dänemarks außerhalb von Kopenhagen. Das Museum besitzt eine bedeutende Sammlung historischer dänischer Kunst und eine umfangreiche Anzahl moderner Kunstwerke.",
                 "imagePath": "assets/img/attractions/aros.jpg",
                 "link": "https://www.aros.dk/"
             },
             {
                 "title": "Marselisborg Deer Park",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Ultrices mi tempus imperdiet nulla. Quis lectus nulla at volutpat diam ut venenatis.",
+                "description": "Im Tierpark von Marselisborg kommt begegnet man Sika- und Damwild in freier Wildbahn ohne trennende Zähne. Darüber hinaus gibt es auch ein eingezäuntes Wildschweingehege. Der Park ist das ganze Jahr geöffnet so lange, wie es Tageslicht gibt und der Eintritt ist frei.",
                 "imagePath": "assets/img/attractions/dyrehave.jpg",
                 "link": "https://udflugtssteder.aarhus.dk/marselisborg-dyrehave/#10"
             },
             {
                 "title": "Aarhus Domkirke",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Ultrices mi tempus imperdiet nulla. Quis lectus nulla at volutpat diam ut venenatis.",
+                "description": "Mit dem Bau der Domkirche von Århus wurde bereits Ende des 12. Jahrhunderts begonnen. Ihre heutige gotische Form erhielt die Kirche um das Jahr 1459 bis ca. 1500. Sie wurde von Beginn an dem Heiligen Sankt Clemens, dem Schutzpatron der Seefahrer gewidmet.",
                 "imagePath": "assets/img/attractions/domkirke.jpg",
                 "link": "https://aarhusdomkirke.dk/english/"
             }
