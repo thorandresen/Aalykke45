@@ -18,6 +18,7 @@ import { BookingComponent } from './booking/booking.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { ScrollComponent } from './scroll/scroll.component';
+import { CalenderComponent } from './calender/calender.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ScrollComponent } from './scroll/scroll.component';
     BookingComponent,
     FooterComponent,
     ScrollComponent,
+    CalenderComponent,
   ],
   imports: [
     BrowserModule,
