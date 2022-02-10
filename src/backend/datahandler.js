@@ -8,8 +8,6 @@ var cors = require('cors')
 app.use(cors())
 app.use(express.json());
 
-con
-
 app.post('/booking', (req, res) => {
     console.log('hej');
     var mailOptions = {

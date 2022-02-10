@@ -25,7 +25,7 @@ export class BookingService {
 
   sendBooking(payload: any) {
     return new Promise((res, rej) => {
-      this.http.post('http://127.0.0.1:3000/booking', JSON.stringify(payload), this.httpOptions).pipe(
+      this.http.post('http://164.92.235.99:3000/booking', JSON.stringify(payload), this.httpOptions).pipe(
         catchError(this.handleError)
       ).subscribe(
         resp => res(resp),
