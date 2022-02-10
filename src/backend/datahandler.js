@@ -8,6 +8,8 @@ var cors = require('cors')
 app.use(cors())
 app.use(express.json());
 
+con
+
 app.post('/booking', (req, res) => {
     console.log('hej');
     var mailOptions = {
@@ -38,6 +40,7 @@ app.post('/booking', (req, res) => {
     let sendMailPromise = new Promise((res, rej) => {
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
+                console.log(error)
                 rej('' + error)
             } else {
                 res('' + info.response);
@@ -50,6 +53,7 @@ app.post('/booking', (req, res) => {
             return new Promise((res, rej) => {
                 transporter.sendMail(verificationOptions, function (error, info) {
                     if (error) {
+                        console.log(error)
                         rej('' + error)
                     } else {
                         res('' + info.response);
