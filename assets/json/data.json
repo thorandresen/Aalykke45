@@ -32,6 +32,14 @@
             {
                 "path": "assets/img/information/6_beach.jpg",
                 "figureText": "Strand"
+            },
+            {
+                "path": "assets/img/information/7_beach.jpg",
+                "figureText": "Strand"
+            },
+            {
+                "path": "assets/img/information/8_beach.jpg",
+                "figureText": "Strand"
             }
         ]
     },
