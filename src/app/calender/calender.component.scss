@@ -9,5 +9,9 @@
 
     iframe {
         width: 1280px;
+
+        @media (max-width: 1320px) { width: 1000px; }
+        @media (max-width: 1000px) { width: 750px; }
+        @media (max-width: 750px) { width: 300px; }
     }
 }
