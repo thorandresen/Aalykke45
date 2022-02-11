@@ -1,3 +1,4 @@
+// https://stackoverflow.com/questions/51980436/nodemailer-throws-error-invalid-login-534-5-7-14
 const express = require('express')
 var nodemailer = require('nodemailer');
 const app = express()
@@ -11,8 +12,8 @@ app.use(express.json());
 app.post('/booking', (req, res) => {
     console.log('hej');
     var mailOptions = {
-        from: 'garskespillercs@gmail.com',
-        to: 'thorg3@gmail.com',
+        from: 'andreastermansen@gmail.com',
+        to: 'andreastermansen@gmail.com',
         subject: `Booking from ${req.body['emailInputControl']}`,
         html:
             `
@@ -29,10 +30,10 @@ app.post('/booking', (req, res) => {
     };
 
     var verificationOptions = {
-        from: 'garskespillercs@gmail.com',
+        from: 'andreastermansen@gmail.com',
         to: req.body['emailInputControl'],
-        subject: `Mail Vertification from Aalykke45`,
-        text: 'The host will soon contact you with further information about your booking.'
+        subject: `Buchungsbestätigung`,
+        text: 'Der Gastgeber wird Sie in Kürze mit weiteren Informationen kontaktieren. Liebe Grüße Andreas Termansen'
     };
 
     let sendMailPromise = new Promise((res, rej) => {
