@@ -71,7 +71,7 @@ app.listen(port, () => {
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'garskespillercs@gmail.com',
+        user: 'andreastermansen@gmail.com',
         pass: password
     }
 });
