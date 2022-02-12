@@ -32,8 +32,8 @@ app.post('/booking', (req, res) => {
     var verificationOptions = {
         from: 'andreastermansen@gmail.com',
         to: req.body['emailInputControl'],
-        subject: `Buchungsbestätigung`,
-        text: 'Der Gastgeber wird Sie in Kürze mit weiteren Informationen kontaktieren. Liebe Grüße Andreas Termansen'
+        subject: `Anfragebestätigung`,
+        text: 'Der Gastgeber wird Sie in Kürze mit weiteren Informationen kontaktieren. Mit freundlichen Grüßen, Andreas Termansen'
     };
 
     let sendMailPromise = new Promise((res, rej) => {
