@@ -40,6 +40,14 @@
             {
                 "path": "assets/img/information/8_beach.jpg",
                 "figureText": "Strand"
+            },
+            {
+                "path": "assets/img/information/9_toilet.jpg",
+                "figureText": "Toilette und Bad"
+            },
+            {
+                "path": "assets/img/information/10_toilet.jpg",
+                "figureText": "Toilette und Bad"
             }
         ]
     },
