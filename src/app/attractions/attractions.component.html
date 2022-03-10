@@ -21,7 +21,7 @@
         </div> -->
 
         <div class="cards-container col">
-            <div *ngFor="let item of cardArray; let i = index" class="card col card-{{i}}"
+            <div *ngFor="let item of cardArray; let i = index" id="{{i}}" class="attraction-card card col"
                 [ngClass]="{'hidden': i != 0}">
                 <img src="{{item.imagePath}}" style="width:100%">
                 <div class="container">
@@ -40,7 +40,7 @@
         </div>
 
         <div class="indicator-container">
-            <div *ngFor="let item of cardArray; let i = index" class="col active-{{i}}">
+            <div *ngFor="let item of cardArray; let i = index" class="attraction-indicator col" id="{{i}}">
                 <a class="indicator-link" (click)="changeSlide(i)">
                     <div class="indicator" [ngClass]="{'active': i == 0}">
                     </div>
