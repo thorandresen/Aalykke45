@@ -11,10 +11,30 @@
             text-align: center;
         }
 
+        .indicator-container {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+
+            .indicator {
+                margin: 5px;
+                height: 3px;
+                width: 30px;
+                background-color: black;
+                opacity: 0.3;
+            }
+
+            .active {
+                opacity: 0.6;
+            }
+        }
+        
+
         .cards-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
+           
 
             .card {
                 margin: 16px 16px;

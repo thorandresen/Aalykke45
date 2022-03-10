@@ -24,4 +24,7 @@ export class AttractionsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeSlide(slide: number): void {
+    console.log(slide);
+  }
 }
