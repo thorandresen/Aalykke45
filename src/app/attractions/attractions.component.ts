@@ -24,11 +24,24 @@ export class AttractionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.handleSwipe();
   }
 
   changeSlide(slide: number): void {
     var cards = this.document.getElementsByClassName('attraction-card');
     var indicators = this.document.getElementsByClassName('attraction-indicator');
-    console.log(slide);
+    var activeIndicator = this.document.querySelector('.attraction-indicator.active');
+    var activeIndicatorID = activeIndicator?.id as string;
+
+    // Remove active from active indicator and set hidden on active card.
+    activeIndicator?.classList.toggle('active');
+    cards[parseInt(activeIndicatorID)].classList.toggle('hidden');
+
+    // Set active on new active indicator and remove hidden from active card.
+    indicators[slide].classList.toggle('active');
+    cards[slide].classList.toggle('hidden');
+  }
+
+  handleSwipe(): void {
   }
 }

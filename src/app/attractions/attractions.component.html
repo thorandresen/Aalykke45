@@ -40,28 +40,13 @@
         </div>
 
         <div class="indicator-container">
-            <div *ngFor="let item of cardArray; let i = index" class="attraction-indicator col" id="{{i}}">
+            <div *ngFor="let item of cardArray; let i = index" class="attraction-indicator col" id="{{i}}"
+                [ngClass]="{'active': i == 0}">
                 <a class="indicator-link" (click)="changeSlide(i)">
-                    <div class="indicator" [ngClass]="{'active': i == 0}">
+                    <div class="indicator">
                     </div>
                 </a>
             </div>
         </div>
-
-
-        <!-- <div class="row">
-            <div class="col">
-                <a>
-                    <fa-icon [icon]="faChevronLeft"></fa-icon>
-                </a>
-            </div>
-
-            <div class="col">
-                <a>
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                </a>
-            </div>
-        </div> -->
-
     </div>
 </div>
