@@ -20,7 +20,7 @@
             </div>
         </div> -->
 
-        <div class="cards-container col">
+        <div class="cards-container col" id="cards-container">
             <div *ngFor="let item of cardArray; let i = index" id="{{i}}" class="attraction-card card col"
                 [ngClass]="{'hidden': i != 0}">
                 <img src="{{item.imagePath}}" style="width:100%">

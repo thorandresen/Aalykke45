@@ -43,5 +43,31 @@ export class AttractionsComponent implements OnInit {
   }
 
   handleSwipe(): void {
+    var touchstartX = 0
+    var touchendX = 0
+
+    const slider = document.getElementById('cards-container')
+
+    if (slider == null) {
+      return;
+    }
+
+    function handleGesture() {
+      if (touchendX < touchstartX && (touchstartX - touchendX) > 50) {
+        console.log("skrrt1");
+      }
+      if (touchendX > touchstartX && (touchendX - touchstartX) > 50) {
+        console.log("skrrt2");
+      }
+    }
+
+    slider.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    slider.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      handleGesture()
+    })
   }
 }
