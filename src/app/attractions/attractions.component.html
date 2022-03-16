@@ -1,7 +1,7 @@
 <div class="section-attractions">
     <div class="container-xl">
         <h2 class="title indexable" id="Sehenswürdigkeiten">{{titleText}}</h2>
-        <!-- <div class="cards-container row">
+        <div class="cards-container row full">
             <div *ngFor="let item of cardArray" class="card col">
                 <img src="{{item.imagePath}}" style="width:100%">
                 <div class="container">
@@ -18,9 +18,9 @@
 
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <div class="cards-container col" id="cards-container">
+        <div class="cards-container col mobile" id="cards-container">
             <div *ngFor="let item of cardArray; let i = index" id="{{i}}" class="attraction-card card col"
                 [ngClass]="{'hidden': i != 0}">
                 <img src="{{item.imagePath}}" style="width:100%">
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="indicator-container">
+        <div class="indicator-container mobile">
             <div *ngFor="let item of cardArray; let i = index" class="attraction-indicator col" id="{{i}}"
                 [ngClass]="{'active': i == 0}">
                 <a class="indicator-link" (click)="changeSlide(i)">
