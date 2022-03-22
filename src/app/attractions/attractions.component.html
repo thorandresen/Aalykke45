@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <div class="section-attractions">
     <div class="container-xl">
         <h2 class="title indexable" id="Sehenswürdigkeiten">{{titleText}}</h2>
@@ -42,7 +44,7 @@
         <div class="indicator-container mobile">
             <div *ngFor="let item of cardArray; let i = index" class="attraction-indicator col" id="{{i}}"
                 [ngClass]="{'active': i == 0}">
-                <a class="indicator-link" (click)="changeSlide(i)">
+                <a class="indicator-link" (click)="changeSlide(i, 'click')">
                     <div class="indicator">
                     </div>
                 </a>
